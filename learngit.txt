@@ -1,6 +1,10 @@
 Git is a version control system.
 Git is a free software.
 
+重启Git Bash之后输入cd learngit进入repository
+
+cd C:/Users/hust退回上级目录
+
 如果git status告诉你有文件被修改过，用git diff可以查看修改内容。
 
 
@@ -21,4 +25,19 @@ learngit文件夹就是一个工作区：
 
 git diff是比较 相对于stage，工作区增减了那些内容，工作区新建的文件没有add过，不会比较。而add过在工作区被删了会比较
 
-git status中某文本文件modified指stage中该文件相对master有变动，显示new file的文本文件是指从来没add过的。deleted是add过但在工作区被删除的文件
+git status中某文本文件modified指工作区文件相对master有变动，显示new file是文本新建第一次add进stage。deleted是add过但在工作区被删除的文件
+
+add，之后修改文本，如果commit之后git status会提示modified，则正确。的确正确，modified就是工作区相对于master的变动。
+
+
+#管理修改
+
+git diff HEAD -- file命令可以查看工作区和版本库里面最新版本的区别
+
+vi file可以直接在MINGW里面修改文本，修改的是工作区的文件。
+
+
+
+#撤销修改
+
+git checkout -- file可以丢弃工作区的修改，让文件回到最近一次git commit或git add的状态。

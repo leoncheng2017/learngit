@@ -1,4 +1,0 @@
-Git is a distributed version control system.
-Git is free software discontributed under the GPL.
-This is Notepad++
-中文中文中文

@@ -41,3 +41,13 @@ vi file可以直接在MINGW里面修改文本，修改的是工作区的文件�
 #撤销修改
 
 git checkout -- file可以丢弃工作区的修改，让文件回到最近一次git commit或git add的状态。
+
+
+
+
+#删除文件
+
+从版本库中删除该文件，那就用命令git rm删掉，并且git commit：
+$ git rm test.txt
+rm 'test.txt'
+$ git commit -m "remove test.txt"
